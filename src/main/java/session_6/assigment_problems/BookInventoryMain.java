@@ -1,0 +1,37 @@
+package main.java.session_6.assigment_problems;
+
+class BookInventory {
+   
+    String title;
+    String author;
+    int copiesAvailable;
+
+   
+    public BookInventory(String title, String author, int copiesAvailable) {
+        this.title = title;
+        this.author = author;
+        this.copiesAvailable = copiesAvailable;
+    }
+
+    
+    public void printEntry() {
+        System.out.println(title + " by " + author + " - " + copiesAvailable + " copies available");
+    }
+}
+
+public class BookInventoryMain {
+    public static void main(String[] args) {
+       
+        BookInventory[] books = new BookInventory[] {
+            new BookInventory("Clean Code", "Robert C. Martin", 3),
+            new BookInventory("Effective Java", "Joshua Bloch", 5),
+            new BookInventory("Refactoring", "Martin Fowler", 0),
+            new BookInventory("Design Patterns", "GoF", 2)
+        };
+
+        // Loop through and print each entry
+        for (BookInventory book : books) {
+            book.printEntry();
+        }
+    }
+}
